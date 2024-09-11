@@ -10,6 +10,142 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+
  *= require_tree .
  *= require_self
  */
+
+.home_box {
+  background-color: #0767e6;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  text-align: center;
+  padding: 40px;
+  border-radius: 5px;
+  background-image: url("https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85%;
+  height: 100vh;
+}
+
+.sub_home {
+  padding: 40px 20px;
+  border-radius: 10px;
+  color: aliceblue;
+
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0.571);
+}
+
+.links {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.article_list {
+  margin: auto;
+}
+
+.jumbotron {
+  color: aliceblue;
+  margin: 20px;
+  background-color: rgb(206, 206, 206);
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-image: url("https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85%;
+  height: 100vh;
+}
+
+.create {
+  border: solid 1px aliceblue;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.create:hover {
+  background-color: #0a5282;
+  color: aliceblue;
+}
+
+.actions {
+  text-decoration: none;
+  color: aliceblue;
+  border: solid 1px;
+  padding: 3px 10px;
+  border-radius: 25px;
+}
+.actions:hover {
+  background-color: #33aeff;
+  color: aliceblue;
+}
+
+.show_links_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.show_links {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: aliceblue;
+  border: solid 1px;
+  padding: 3px 10px;
+  border-radius: 25px;
+}
+
+.show_links:hover {
+  background-color: #0b67a5;
+  color: aliceblue;
+}
+
+.edit_del {
+  display: flex;
+  column-gap: 5px;
+}
+
+.art_box {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: rgba(55, 55, 55, 0.956);
+  margin-bottom: 20px;
+  padding: 1rem;
+  border: solid 1px;
+  border-color: aliceblue;
+}
+.art_content {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  padding: 20px 40px;
+  background-color: rgb(254, 254, 254);
+  color: black;
+  border-radius: 7px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background: #0382e3;
+  background: linear-gradient(to right, #0767e6, #33aeff);
+}

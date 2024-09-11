@@ -1,11 +1,26 @@
+<div class="container jumbotron">
 <h1><%=@article.title.titlecase%></h1>
 
-<p><strong>Title: </strong><%=@article.title.titlecase%></p>
+<div class="art_box">
+<div class="art_content">
+<p>
+<strong>Title: </strong><%=@article.title.titlecase%><br/>
+Created: <%=@article.created_at%>
+</p>
 <p><strong>Description: </strong><%=@article.description%></p>
+</div>
+</div>
 
-<p><%= link_to "Edit", edit_article_path(@article) %></p>
+<div class="show_links_box">
+<div>
+<p><%= link_to "Return to List", articles_path, class: "show_links" %></p>
+</div>
+<div class="edit_del">
+<p><%= link_to "Edit", edit_article_path(@article), class: "show_links" %></p>
 <p><%= link_to "Delete", article_path(@article), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
-  } %></p>
-<p><%= link_to "Return to List", articles_path %></p>
+  }, class: "show_links" %></p>
+</div>
+</div>
+</div>
