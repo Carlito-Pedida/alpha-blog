@@ -89,6 +89,23 @@
   overflow: scroll;
 }
 
+.bloggers {
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 40px;
+  height: 93%;
+
+  border: solid 1px;
+  overflow: scroll;
+}
+
+.user_box {
+  overflow: scroll;
+}
+
 .new_user_box {
   background-color: rgba(55, 55, 55, 0.956);
   margin-bottom: 20px;
