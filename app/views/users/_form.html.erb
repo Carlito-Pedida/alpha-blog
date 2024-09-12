@@ -37,7 +37,7 @@
         <%= link_to "Cancel", root_path,  class: "btn btn-secondary" %>
     <div>
 </div>
-<%= f.submit "Sign up", class: "btn btn-primary"  %>
+<%= f.submit(@user.new_record? ? "Sign up" : "Update Account", class: "btn btn-primary")%>
 </div>
 <% end %>
 </div>  
