@@ -1,8 +1,9 @@
 
 <div class="art_box">
+<%= render "shared/errors", obj: @article %>
 <%= form_with(model: @article,  local: true, data: { turbo: false })  do |f| %>
 <div class="form_content">
-<div class="mb-1 form-group row">
+<div class=" form-group row">
 <%= f.label :title, class: "col-2 col-form-label" %>
 <div class="col-10">
 <%= f.text_field :title, class: "form-control rounded-1", placeholder: "Type in title" %>
@@ -10,8 +11,12 @@
 </div>
 <div  class="form-group row">
 <%= f.label :description, class: "col-2 col-form-label" %><br/>
+<div class="col-10  my-1">
+<%= f.text_area :description, class: "form-control", placeholder: "Type in description" %>
+</div>
+<%= f.label :blog, class: "col-2 col-form-label" %><br/>
 <div class="col-10">
-<%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Type in article" %>
+<%= f.text_area :blog, rows: 10, class: "form-control", placeholder: "Type in article" %>
 </div>
 </div>
 </div>
@@ -24,5 +29,6 @@
 </div>
 <% end %>
 </div>
+
 
   

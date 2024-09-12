@@ -1,4 +1,5 @@
 /*
+  *= require simplemde
  *= require_tree .
  *= require_self
  */
@@ -30,6 +31,7 @@
 
 .greeting_box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 40px;
@@ -87,6 +89,13 @@
   overflow: scroll;
 }
 
+.new_user_box {
+  padding: 10px 40px;
+  height: 100%;
+  border: solid 1px;
+  overflow: hidden;
+}
+
 .card_bg {
   background-color: rgb(98, 190, 251);
 }
@@ -106,6 +115,24 @@
 
 .create:hover {
   background-color: #0b3d5f;
+  color: aliceblue;
+}
+
+.signup {
+  border: solid 1px aliceblue;
+  background-color: rgb(24, 117, 71);
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+}
+.user_form {
+  width: 70%;
+  overflow: scroll;
+}
+
+.signup:hover {
+  background-color: #074490;
   color: aliceblue;
 }
 
