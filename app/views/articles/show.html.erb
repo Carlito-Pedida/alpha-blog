@@ -1,26 +1,30 @@
 <div class="container jumbotron">
-<h1><%=@article.title.titlecase%></h1>
-
+<div class="new_art_box">
+<div class="text-center">
+<h2><%=@article.title.titlecase%></h2>
+</div>
+ <%= render "layouts/messages" %>
 <div class="art_box">
 <div class="art_content">
 <p>
 <strong>Title: </strong><%=@article.title.titlecase%><br/>
-Created: <%=@article.created_at%>
+Created: <%= time_ago_in_words@article.created_at %> ago...
+Updated: <%= time_ago_in_words@article.updated_at %> ago...
 </p>
 <p><strong>Description: </strong><%=@article.description%></p>
 </div>
-</div>
-
-<div class="show_links_box">
+<div class="show_links_box mt-3">
 <div>
-<p><%= link_to "Return to List", articles_path, class: "show_links" %></p>
+<%= link_to "Return to List", articles_path, class: "show_links_go" %>
 </div>
 <div class="edit_del">
-<p><%= link_to "Edit", edit_article_path(@article), class: "show_links" %></p>
-<p><%= link_to "Delete", article_path(@article), data: {
+<%= link_to "Edit", edit_article_path(@article), class: "show_links_update" %>
+<%= link_to "Delete", article_path(@article), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
-  }, class: "show_links" %></p>
+  }, class: "show_links_del" %>
+</div>
+</div>
 </div>
 </div>
 </div>
