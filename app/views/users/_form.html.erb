@@ -1,0 +1,46 @@
+
+<div class="art_box">
+<%= render "shared/errors", obj: @user %>
+    <%= form_with(model: @user,  local: true, data: { turbo: false })  do |f| %>
+<div class="form_content">
+        <div class=" form-group row">
+            <%= f.label :first_name, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.text_field :first_name, class: "form-control rounded-1", placeholder: "Type in first name" %>
+        </div>
+    </div>
+        <div class=" form-group row my-2">
+            <%= f.label :last_name, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.text_field :last_name, class: "form-control rounded-1", placeholder: "Type in last name" %>
+        </div>
+    </div>
+        <div class=" form-group row">
+            <%= f.label :email, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.email_field :email, class: "form-control rounded-1", placeholder: "Type in email" %>
+        </div>
+    </div>
+        <div class=" form-group row my-2 ">
+            <%= f.label :username, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.text_field :username, class: "form-control rounded-1", placeholder: "Type in username" %>
+        </div>
+    </div>
+        <div class=" form-group row">
+            <%= f.label :password, class: "col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.password_field :password, class: "form-control rounded-1", placeholder: "Type in password" %>
+        </div>
+    </div>
+    <div class="d-flex mt-3 align-items-start justify-content-between">
+        <%= link_to "Cancel", root_path,  class: "btn btn-secondary" %>
+    <div>
+</div>
+<%= f.submit(@user.new_record? ? "Sign up" : "Update Account", class: "btn btn-primary")%>
+</div>
+<% end %>
+</div>  
+
+
+  

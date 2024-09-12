@@ -1,12 +1,16 @@
 <div class="home_box container">
 <div  class="greeting_box">
-<div class="sub_home">
+<div class="row">
+<%= render "layouts/messages" %>
+</div>
+
+<div class="sub_home row">
 <h1>Welcome to Alpha Blog</h1>
 <p>"Where ideas come to life. Share your thoughts, explore diverse perspectives, and engage with a vibrant community of writers."</p>
 <br/>
 <p>"Whether you're here to share your insights, read compelling stories, or connect with like-minded individuals, Alpha Blog is the place for meaningful conversations and creative expression."</p>
 <div>
-<button type="button" class="btn btn-success">Sign up!</button>
+<p><%= link_to "Sign up", signup_path, class: "signup" %></p>
 </div>
 </div>
 </div>

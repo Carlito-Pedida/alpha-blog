@@ -10,8 +10,12 @@
 <strong>Title: </strong><%=@article.title.titlecase%><br/>
 Created: <%= time_ago_in_words@article.created_at %> ago...
 Updated: <%= time_ago_in_words@article.updated_at %> ago...
+by <%= @article.user.first_name %>  <%= @article.user.last_name %>
 </p>
 <p><strong>Description: </strong><%=@article.description%></p>
+<div>
+<p><strong></strong><%=@article.blog%></p>
+</div>
 </div>
 <div class="show_links_box mt-3">
 <div>

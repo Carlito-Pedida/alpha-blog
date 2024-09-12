@@ -16,6 +16,7 @@ before_action :set_article, only: [ :show, :edit, :update, :destroy ]
 
     def create
         @article = Article.new(article_params)
+        @article.user = User.last
         if @article.save
             flash[:notice] = "Article was created successfully."
             redirect_to @article
@@ -45,6 +46,6 @@ before_action :set_article, only: [ :show, :edit, :update, :destroy ]
     end
 
     def article_params
-        params.require(:article).permit(:title, :description)
+        params.require(:article).permit(:title, :description, :blog)
     end
 end
