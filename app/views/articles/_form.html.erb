@@ -1,6 +1,5 @@
 
 <div class="art_box">
-<%= render "shared/errors", obj: @article %>
 <%= form_with(model: @article,  local: true, data: { turbo: false })  do |f| %>
 <div class="form_content">
 <div class=" form-group row">
@@ -23,9 +22,8 @@
 <div class="d-flex mt-3 align-items-start justify-content-between">
 <%= link_to "Cancel", articles_path,  class: "btn btn-secondary" %>
 <div>
-
 </div>
-<%= f.submit class: "btn btn-primary"  %>
+<%= f.submit class: "btn btn-primary"%>
 </div>
 <% end %>
 </div>

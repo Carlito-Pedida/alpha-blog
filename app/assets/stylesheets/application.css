@@ -72,7 +72,7 @@
   background-repeat: no-repeat;
   height: 85%;
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .list_box {
@@ -90,10 +90,13 @@
 }
 
 .new_user_box {
-  padding: 10px 40px;
-  height: 100%;
+  background-color: rgba(55, 55, 55, 0.956);
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 1rem;
   border: solid 1px;
-  overflow: hidden;
+  border-color: aliceblue;
+  overflow: scroll;
 }
 
 .card_bg {
